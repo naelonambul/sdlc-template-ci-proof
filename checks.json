@@ -5,11 +5,51 @@
     {
       "id": "control-plane",
       "group": "core",
-      "argv": ["python3", "-m", "unittest", "discover", "-s", "scripts/tests", "-t", "."],
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-t",
+        "."
+      ],
       "cwd": ".",
       "timeout_seconds": 600,
-      "paths": ["scripts/**", "checks.json", "changes/**", ".github/**", ".claude/**", ".agents/**", "AGENTS.md", "intent.md", "spec.md", ".gitattributes"],
-      "requires": ["python3", "git"]
+      "paths": [
+        "scripts/**",
+        "checks.json",
+        "changes/**",
+        ".github/**",
+        ".claude/**",
+        ".agents/**",
+        "AGENTS.md",
+        "intent.md",
+        "spec.md",
+        ".gitattributes"
+      ],
+      "requires": [
+        "python3",
+        "git"
+      ]
+    },
+    {
+      "argv": [
+        "python3",
+        "-c",
+        "import sys; print(\"deliberate failure\"); sys.exit(3)"
+      ],
+      "timeout_seconds": 60,
+      "requires": [
+        "python3"
+      ],
+      "id": "proof-probe",
+      "group": "core",
+      "cwd": ".",
+      "paths": [
+        "checks.json"
+      ]
     }
   ]
 }
