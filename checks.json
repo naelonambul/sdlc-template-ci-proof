@@ -36,13 +36,12 @@
     },
     {
       "argv": [
-        "python3",
-        "-c",
-        "import sys; print(\"deliberate failure\"); sys.exit(3)"
+        "proof-missing-tool",
+        "--version"
       ],
       "timeout_seconds": 60,
       "requires": [
-        "python3"
+        "proof-missing-tool"
       ],
       "id": "proof-probe",
       "group": "core",
