@@ -39,7 +39,7 @@
         "proof-missing-tool",
         "--version"
       ],
-      "timeout_seconds": 60,
+      "timeout_seconds": 61,
       "requires": [
         "proof-missing-tool"
       ],
