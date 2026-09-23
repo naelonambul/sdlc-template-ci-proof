@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "baseline": {},
+  "packet_sha256": "sha256:900a89d5fad2c6200b77ab3d1765e190fd0f321473c9a10c04f7c3c48945d5bf",
+  "evidence": [
+    "github-actions: repository workflow on the PR"
+  ]
+}
