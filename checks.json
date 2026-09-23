@@ -5,11 +5,51 @@
     {
       "id": "control-plane",
       "group": "core",
-      "argv": ["python3", "-m", "unittest", "discover", "-s", "scripts/tests", "-t", "."],
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-t",
+        "."
+      ],
       "cwd": ".",
       "timeout_seconds": 600,
-      "paths": ["scripts/**", "checks.json", "changes/**", ".github/**", ".claude/**", ".agents/**", "AGENTS.md", "intent.md", "spec.md", ".gitattributes"],
-      "requires": ["python3", "git"]
+      "paths": [
+        "scripts/**",
+        "checks.json",
+        "changes/**",
+        ".github/**",
+        ".claude/**",
+        ".agents/**",
+        "AGENTS.md",
+        "intent.md",
+        "spec.md",
+        ".gitattributes"
+      ],
+      "requires": [
+        "python3",
+        "git"
+      ]
+    },
+    {
+      "id": "proof-extra",
+      "group": "core",
+      "argv": [
+        "python3",
+        "-c",
+        "print('proof-extra ran')"
+      ],
+      "cwd": ".",
+      "timeout_seconds": 60,
+      "paths": [
+        "proof-area/**"
+      ],
+      "requires": [
+        "python3"
+      ]
     }
   ]
 }
